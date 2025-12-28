@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.io.File;
 import javax.swing.*;
 
 public class RSAGUI extends JFrame {
@@ -128,6 +129,7 @@ public class RSAGUI extends JFrame {
     
     private void chooseFile(JTextField field) {
         JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setCurrentDirectory(new File("C:/Users/prog/rsakurs"));
         if (fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
             field.setText(fileChooser.getSelectedFile().getAbsolutePath());
         }
